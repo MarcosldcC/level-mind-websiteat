@@ -17,7 +17,6 @@ export const metadata: Metadata = {
     type: "website",
     locale: "pt_BR",
   },
-    generator: 'v0.dev'
 }
 
 export default function RootLayout({
@@ -27,6 +26,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pt-BR">
+      <head>
+        <link rel="icon" href="/faveicon.png" type="image/png" />
+      </head>
       <body className={inter.className}>{children}</body>
     </html>
   )
