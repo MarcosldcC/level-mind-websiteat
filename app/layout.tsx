@@ -8,7 +8,7 @@ const inter = Inter({ subsets: ["latin"] })
 export const metadata: Metadata = {
   title: "Level Mind - Capacitação Empresarial em IA Generativa para PMEs",
   description:
-    "Transforme sobrecarga em produtividade com IA Generativa. Capacitação prática para equipes que precisam de resultados reais — sem perder tempo com teoria.",
+    "Transforme sobrecarga em produtividade com IA Generativa. Capacitação prática para equipes que precisam de resultados reais, sem perder tempo com teoria.",
   keywords: "IA Generativa, Capacitação Empresarial, PME, Automação, Produtividade, Inteligência Artificial",
   authors: [{ name: "Level Mind" }],
   openGraph: {

@@ -5,9 +5,9 @@ import { MessageCircle } from "lucide-react"
 export function WhatsAppButton() {
   const handleWhatsAppClick = () => {
     const message = encodeURIComponent(
-      "Olá! Gostaria de saber mais sobre a capacitação em IA Generativa da Level Mind.",
+      "Olá! Quero saber mais sobre a capacitação em IA da LevelMind para pequenas e médias empresas. Parece exatamente o que estou buscando",
     )
-    window.open(`https://wa.me/5511999999999?text=${message}`, "_blank")
+    window.open(`https://wa.me/5583996265549?text=${message}`, "_blank")
   }
 
   return (

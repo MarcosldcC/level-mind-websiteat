@@ -25,7 +25,7 @@ export function Methodology() {
 
   const steps = [
     {
-      number: "01",
+      
       title: "DIAGNÓSTICO",
       subtitle: "30min • Gratuito",
       description: "Mapeamento de processos e identificação de oportunidades de automação específicas para sua empresa",

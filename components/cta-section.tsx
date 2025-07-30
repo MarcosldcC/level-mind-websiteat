@@ -1,8 +1,7 @@
 "use client"
 
-import type React from "react"
-
 import { useState } from "react"
+import type React from "react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { ArrowRight, CheckCircle, Clock, Shield } from "lucide-react"
@@ -51,11 +50,14 @@ export function CTASection() {
   }
 
   return (
-    <section className="py-24 bg-gradient-to-br from-[#092333] via-[#0a2a3a] to-[#092333] relative overflow-hidden">
+    <section
+      id="cta"
+      className="py-24 bg-gradient-to-br from-[#092333] via-[#0a2a3a] to-[#092333] relative overflow-hidden scroll-mt-20"
+    >
       {/* Background Elements */}
       <div className="absolute inset-0">
-        <div className="absolute top-20 left-20 w-96 h-96 bg-[#FFC845]/10 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-20 right-20 w-80 h-80 bg-[#FFC845]/5 rounded-full blur-3xl animate-pulse delay-1000"></div>
+        <div className="absolute top-20 left-20 w-96 h-96 bg-[#FFC845]/10 rounded-full blur-3xl animate-pulse" />
+        <div className="absolute bottom-20 right-20 w-80 h-80 bg-[#FFC845]/5 rounded-full blur-3xl animate-pulse delay-1000" />
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
@@ -120,8 +122,6 @@ export function CTASection() {
               <span>Sem compromisso</span>
             </div>
           </div>
-
-          {/* Social Proof */}
         </div>
       </div>
     </section>

@@ -24,7 +24,7 @@ export function Footer() {
               </div>
               <div className="flex items-center gap-3 text-white/70">
                 <Phone className="h-5 w-5" />
-                <span>+55 (87) 9636-6697</span>
+                <span>+55 (83) 9962-65549</span>
               </div>
               <div className="flex items-center gap-3 text-white/70">
                 <MapPin className="h-5 w-5" />
@@ -47,8 +47,7 @@ export function Footer() {
             <div className="flex items-center gap-4">
               <span className="text-white/70 mr-4">Siga-nos:</span>
               {[
-                { icon: Linkedin, href: "#", label: "LinkedIn" },
-                { icon: Instagram, href: "#", label: "Instagram" },
+                { icon: Instagram, href: "https://www.instagram.com/levelmind.lab?igsh=MW83c2ZremZzMXYyag%3D%3D&utm_source=qr", label: "Instagram" },
               ].map((social) => (
                 <a
                   key={social.label}

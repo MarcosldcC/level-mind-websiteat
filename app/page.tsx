@@ -12,9 +12,9 @@ export default function Home() {
     <main className="min-h-screen bg-white overflow-x-hidden">
       <Navigation />
       <HeroSection />
-      <FeaturesSection />
       <ProcessSection />
-      <TestimonialsSection />
+      <FeaturesSection />
+      {/*<TestimonialsSection />*/}
       <CTASection />
       <Footer />
       <WhatsAppButton />
