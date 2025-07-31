@@ -1,12 +1,14 @@
 "use client"
 
 import { useState, useEffect } from "react"
+import { useRouter } from "next/navigation"
 import { Button } from "@/components/ui/button"
 import { Menu, X, ArrowRight } from "lucide-react"
 
 export function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  const router = useRouter()
 
   useEffect(() => {
     const handleScroll = () => {
@@ -22,6 +24,21 @@ export function Navigation() {
       el.scrollIntoView({ behavior: "smooth" })
     }
   }
+
+  const goToSection = (id: string) => {
+    if (typeof window !== "undefined") {
+      if (window.location.pathname === "/") {
+        scrollToSection(id)
+      } else {
+        router.push(`/?scrollTo=${id}`)
+      }
+    }
+  }
+
+  const menuItems = [
+    { name: "Metodologia", id: "process-section" },
+    { name: "Sobre", link: "/about" },
+  ]
 
   return (
     <nav
@@ -40,13 +57,16 @@ export function Navigation() {
 
           {/* Desktop Menu */}
           <div className="hidden lg:flex items-center space-x-12">
-            {[
-              { name: "Metodologia", id: "process-section" },
-              { name: "Sobre", id: "features-section" },
-            ].map((item) => (
+            {menuItems.map((item) => (
               <button
                 key={item.name}
-                onClick={() => scrollToSection(item.id)}
+                onClick={() => {
+                  if (item.link) {
+                    router.push(item.link)
+                  } else if (item.id) {
+                    goToSection(item.id)
+                  }
+                }}
                 className="text-white/80 hover:text-white transition-colors duration-300 font-medium relative group"
               >
                 {item.name}
@@ -59,7 +79,7 @@ export function Navigation() {
           <div className="hidden lg:flex items-center space-x-4">
             <Button
               className="bg-[#FFC845] hover:bg-[#e6b33e] text-[#092333] px-6 py-3 rounded-xl font-medium group bg-white"
-              onClick={() => scrollToSection("cta")}
+              onClick={() => goToSection("cta")}
             >
               Começar agora
               <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
@@ -76,15 +96,16 @@ export function Navigation() {
         {isMobileMenuOpen && (
           <div className="lg:hidden absolute top-full left-0 right-0 bg-[#092333] border-b border-[#092333]/20 shadow-lg">
             <div className="px-6 py-6 space-y-4">
-              {[
-                { name: "Metodologia", id: "process-section" },
-                { name: "Sobre", id: "features-section" },
-              ].map((item) => (
+              {menuItems.map((item) => (
                 <button
                   key={item.name}
                   onClick={() => {
                     setIsMobileMenuOpen(false)
-                    scrollToSection(item.id)
+                    if (item.link) {
+                      router.push(item.link)
+                    } else if (item.id) {
+                      goToSection(item.id)
+                    }
                   }}
                   className="block text-white/80 hover:text-white font-medium w-full text-left"
                 >
@@ -97,7 +118,7 @@ export function Navigation() {
                   className="w-full bg-[#FFC845] hover:bg-[#e6b33e] text-[#092333]"
                   onClick={() => {
                     setIsMobileMenuOpen(false)
-                    scrollToSection("cta")
+                    goToSection("cta")
                   }}
                 >
                   Começar agora
