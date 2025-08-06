@@ -24,7 +24,7 @@ export function Footer() {
               </div>
               <div className="flex items-center gap-3 text-white/70">
                 <Phone className="h-5 w-5" />
-                <span>+55 (83) 9962-65549</span>
+                <span>+55 (83) 98136-2593</span>
               </div>
               <div className="flex items-center gap-3 text-white/70">
                 <MapPin className="h-5 w-5" />
@@ -34,10 +34,8 @@ export function Footer() {
           </div>
 
           {/* Services */}
-          
+          {/* (seções futuras aqui) */}
 
-          {/* Company */}
-          
         </div>
 
         {/* Social & Certifications */}
@@ -47,11 +45,22 @@ export function Footer() {
             <div className="flex items-center gap-4">
               <span className="text-white/70 mr-4">Siga-nos:</span>
               {[
-                { icon: Instagram, href: "https://www.instagram.com/levelmind.lab?igsh=MW83c2ZremZzMXYyag%3D%3D&utm_source=qr", label: "Instagram" },
+                {
+                  icon: Instagram,
+                  href: "https://www.instagram.com/levelmind.lab?igsh=MW83c2ZremZzMXYyag%3D%3D&utm_source=qr",
+                  label: "Instagram"
+                },
+                {
+                  icon: Linkedin,
+                  href: "https://www.linkedin.com/company/levelmind-lab",
+                  label: "LinkedIn"
+                }
               ].map((social) => (
                 <a
                   key={social.label}
                   href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="w-10 h-10 bg-white/10 rounded-xl flex items-center justify-center text-white/70 hover:bg-[#FFC845] hover:text-[#092333] transition-all duration-300 hover:scale-110"
                   aria-label={social.label}
                 >
@@ -61,12 +70,13 @@ export function Footer() {
             </div>
 
             {/* Certifications */}
-            
+            {/* (seções futuras aqui) */}
           </div>
         </div>
 
         {/* Copyright */}
-        
+        {/* (opcional: adicionar aviso de direitos) */}
+
       </div>
     </footer>
   )

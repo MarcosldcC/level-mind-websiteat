@@ -7,7 +7,7 @@ export function WhatsAppButton() {
     const message = encodeURIComponent(
       "Olá! Quero saber mais sobre a capacitação em IA da LevelMind para pequenas e médias empresas. Parece exatamente o que estou buscando",
     )
-    window.open(`https://wa.me/5583996265549?text=${message}`, "_blank")
+    window.open(`https://wa.me/5583981362593?text=${message}`, "_blank")
   }
 
   return (
